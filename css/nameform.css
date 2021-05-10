@@ -1,0 +1,51 @@
+header {
+    margin-left: 90px;
+}
+
+.toppage_btn {
+    text-align: right;
+}
+
+p {
+    padding-left: 80px;
+}
+
+ul {
+    list-style: none;
+}
+
+#save {
+    width: 50px;
+    font-size: 20px;
+    background: white;
+    color: #000;
+    border: solid;
+    border-width: 1px;
+    margin: 5px 0px 5px 0px;
+    padding: 5px 50px 5px 50px;
+    text-decoration: none;
+}
+
+#clear {
+    width: 80px;
+    font-size: 20px;
+    background: white;
+    color: #000;
+    border: solid;
+    border-width: 1px;
+    margin: 5px 645px 5px 0px;
+    padding: 5px 20px 5px 50px;
+    text-decoration: none;
+}
+
+#reset {
+    width: 90px;
+    font-size: 20px;
+    background: white;
+    color: #000;
+    border: solid;
+    border-width: 1px;
+    margin: 5px 645px 5px 0px;
+    padding: 5px 20px 5px 40px;
+    text-decoration: none;
+}

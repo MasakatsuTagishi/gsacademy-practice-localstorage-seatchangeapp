@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/seatchange.css">
+    <title>席替え</title>
+</head>
+<body>
+    <header>
+        <h1>席替え</h1>
+    </header>
+
+    <main>
+
+        <!-- スタートボタンの配置 -->
+        <div id="start_btn">スタート</div>
+
+        <!-- 席をランダムに決める -->
+        <div id="container">
+            <div class="item"><input type="text" style="border:none" id="name1"></div>
+            <div class="item"><input type="text" style="border:none" id="name2"></div>
+            <div class="item"><input type="text" style="border:none" id="name3"></div>
+            <div class="item"><input type="text" style="border:none" id="name4"></div>
+            <div class="item"><input type="text" style="border:none" id="name5"></div>
+            <div class="item"><input type="text" style="border:none" id="name6"></div>
+            <div class="item"><input type="text" style="border:none" id="name7"></div>
+            <div class="item"><input type="text" style="border:none" id="name8"></div>
+            <div class="item"><input type="text" style="border:none" id="name9"></div>
+            <div class="item"><input type="text" style="border:none" id="name10"></div>
+            <div class="item"><input type="text" style="border:none" id="name11"></div>
+            <div class="item"><input type="text" style="border:none" id="name12"></div>
+            <div class="item"><input type="text" style="border:none" id="name13"></div>
+            <div class="item"><input type="text" style="border:none" id="name14"></div>
+            <div class="item"><input type="text" style="border:none" id="name15"></div>            
+        </div>
+
+        <div>
+            <!-- トップページへ -->
+            <div><a class="toppage_btn" href="toppage.html">トップページへ</a></div>
+        </div>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        // スタートボタンをクリック
+        $('#start_btn').on('click',function(){
+            // console.log('ok');
+            // 呼び出し
+            if (localStorage.getItem('memo')) { // 値が保存されていれば
+              let jsonData = localStorage.getItem('memo');
+              let data = JSON.parse(jsonData);
+              //  console.log(data);
+              $('#name1').val(data.name1);
+              $('#name2').val(data.name2);
+              $('#name3').val(data.name3);
+              $('#name4').val(data.name4);
+              $('#name5').val(data.name5);
+              $('#name6').val(data.name6);
+              $('#name7').val(data.name7);
+              $('#name8').val(data.name8);
+              $('#name9').val(data.name9);
+              $('#name10').val(data.name10);
+              $('#name11').val(data.name11);
+              $('#name12').val(data.name12);
+              $('#name13').val(data.name13);
+              $('#name14').val(data.name14);
+              $('#name15').val(data.name15);
+            } else {
+              alert('データがないです。');
+            };
+
+            // inputタグをシャッフルする
+            let arr = [];
+            $("#container input").each(function() {
+                arr.push($(this).val());
+            });
+            arr.sort(function() {
+                return Math.random() - Math.random();
+            });
+                $("#container").empty();
+            for(i=0; i < arr.length; i++) {
+                $("#container").append('<ul>' + arr[i] + '</ul>');
+            };
+        
+            // console.log('ok'); 
+            // リスト一覧・シャッフル設定
+            // let list = [
+            //     '#name1','#name2','#name3','#name4','#name5','#name6','#name7','#name8','#name9','#name10','#name11','#name12','#name13','#name14','#name15'];
+            // // console.log(list);
+            // // const shuffle = function() {return Math.random()-.5};
+            // list.sort(shuffle);
+            // // console.log(list);
+            // // ブラウザ上に表示
+            // let ptag = '';
+            // for(let i =0; i < list.length; i++){
+            // // console.log(list[i]);
+            // ptag += '<p>' + list[i] + '</p>';
+            // };
+            // // console.log(ptag);
+            // $('#container').html(ptag);
+        });
+
+
+        // クリア
+        // $('#clear_btn').on('click',function(){
+        //     // alert('clear_btn');
+        //     $('#container div input').val('');
+        // });
+
+        
+            
+
+
+    </script>
+
+</body>
+</html>

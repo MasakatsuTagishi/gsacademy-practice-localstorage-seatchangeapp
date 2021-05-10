@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/nameform.css">
+    <title>名前登録</title>
+</head>
+<body>
+    <header>
+        <h2>設定</h2>
+    </header>
+
+    <main>
+
+        <!-- 名前入力 -->
+        
+        <form>
+            <p>名前登録</p>
+            <ul>
+                <li><input type="text" id="name1"></li>
+                <li><input type="text" id="name2"></li>
+                <li><input type="text" id="name3"></li>
+                <li><input type="text" id="name4"></li>
+                <li><input type="text" id="name5"></li>
+                <li><input type="text" id="name6"></li>
+                <li><input type="text" id="name7"></li>
+                <li><input type="text" id="name8"></li>
+                <li><input type="text" id="name9"></li>
+                <li><input type="text" id="name10"></li>
+                <li><input type="text" id="name11"></li>
+                <li><input type="text" id="name12"></li>
+                <li><input type="text" id="name13"></li>
+                <li><input type="text" id="name14"></li>
+                <li><input type="text" id="name15"></li>               
+            </ul>
+        </form>
+
+        <ul class="btn">
+            <!-- 保存ボタン -->
+            <li id="save">保存</li>
+            <!-- 画面表示のクリア -->
+            <li id="clear">クリア</li>
+            <!-- 保存情報削除ボタン -->
+            <li id="reset">リセット</li>
+        </ul>
+
+        <div><a class="toppage_btn" href="toppage.html">戻る</a></div>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        
+        // 保存
+        $('#save').on('click',function(){
+            const data = {
+                name1:$('#name1').val(),
+                name2:$('#name2').val(),
+                name3:$('#name3').val(),
+                name4:$('#name4').val(),
+                name5:$('#name5').val(),
+                name6:$('#name6').val(),
+                name7:$('#name7').val(),
+                name8:$('#name8').val(),
+                name9:$('#name9').val(),
+                name10:$('#name10').val(),
+                name11:$('#name11').val(),
+                name12:$('#name12').val(),
+                name13:$('#name13').val(),
+                name14:$('#name14').val(),
+                name15:$('#name15').val(),
+              };
+              // console.log(data);
+              let jsonData = JSON.stringify(data);
+              // console.log(jsonData);        
+              localStorage.setItem('memo',jsonData); 
+        });
+
+        // クリア
+        $('#clear').on('click',function(){
+            $('#name1').val('');
+            $('#name2').val('');
+            $('#name3').val('');
+            $('#name4').val('');
+            $('#name5').val('');
+            $('#name6').val('');
+            $('#name7').val('');
+            $('#name8').val('');
+            $('#name9').val('');
+            $('#name10').val('');
+            $('#name11').val('');
+            $('#name12').val('');
+            $('#name13').val('');
+            $('#name14').val('');
+            $('#name15').val('');
+        });
+
+        // リセット
+        $('#reset').on('click',function(){
+            localStorage.removeItem('memo');
+            $('#name1').val('');
+            $('#name2').val('');
+            $('#name3').val('');
+            $('#name4').val('');
+            $('#name5').val('');
+            $('#name6').val('');
+            $('#name7').val('');
+            $('#name8').val('');
+            $('#name9').val('');
+            $('#name10').val('');
+            $('#name11').val('');
+            $('#name12').val('');
+            $('#name13').val('');
+            $('#name14').val('');
+            $('#name15').val('');
+        });
+
+    </script>
+
+</body>
+</html>

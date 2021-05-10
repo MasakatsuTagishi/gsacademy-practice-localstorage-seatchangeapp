@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+}
+
+#start_btn {
+    text-align: center;
+    font-size: 1rem;
+    background: white;
+    color: #000;
+    border: solid;
+    border-width: 1px;
+    padding: 10px 100px 10px 100px;
+    margin: 0px auto 0px auto;
+}
+
+#container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-rows: 120px 120px 120px 120px 120px;
+}
+
+ul {
+    padding: 30px 10px 10px 10px;
+    border: solid;
+}
+
+.item {
+    text-align: center;
+}
+
+.toppage_btn {
+    text-align: right;
+    margin-top: 30px;
+}

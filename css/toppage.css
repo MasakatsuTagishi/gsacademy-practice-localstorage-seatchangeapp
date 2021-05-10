@@ -1,0 +1,31 @@
+.top {
+    text-align: center;
+}
+
+.title {
+    margin-top: 10%;
+}
+
+.container {
+    margin-bottom: 10px;
+}
+
+.start_btn {
+    font-size: 1.375rem;
+    background: white;
+    color: #000;
+    border: solid;
+    border-width: 1px;
+    padding: 5px 20px 5px 20px;
+    text-decoration: none;
+}
+
+.settei_btn {
+    font-size: 1.375rem;
+    background: white;
+    color: #000;
+    border: solid;
+    border-width: 1px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
